@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
     font-family: 'Lato', sans-serif;
 }
 
@@ -64,6 +65,23 @@ body {
     text-align: center;
 }
 
+.btn {
+    margin-top: 15px;
+    padding: 11px 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
 /* Main */
 
 #main {
@@ -106,8 +124,8 @@ body {
 #nav li a{
     text-decoration: none;
     line-height: 46px;
-    padding: 0 24px;
-    display: inline-block;
+    padding: 1px 24px;
+    display: block;
 }
 
 #nav > li:hover > a,
@@ -141,10 +159,19 @@ body {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
 
+}
+
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .search-btn:hover {
@@ -152,6 +179,16 @@ body {
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+    
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -191,7 +228,8 @@ body {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    max-width: 100%;
+    padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -215,7 +253,8 @@ body {
 }
 
 #content .about-description {
-    margin-top: 30px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     line-height: 1.6;
     text-align: justify;
 }
@@ -307,27 +346,12 @@ body {
     line-height: 1.4;
 }
 
-.tour-section .place-buy-btn {
-    margin-top: 15px;
-    padding: 11px 16px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    display: inline-block;
-}
-
-.tour-section .place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
-}
-
 .map-section img {
     width: 100%;
 }
 
 .contact-section {
     margin-top: 48px;
-    margin-bottom: 96px;
 }
 
 .contact-section .contact-info{
